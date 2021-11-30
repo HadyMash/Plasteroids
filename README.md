@@ -1,5 +1,4 @@
 # Plasteroids
----
 This game is my second submission for [#SeaJam](https://itch.io/jam/seajam) which I didn't manage to finish in time because I had some commitments.
 
 **Itch Page:** https://xd-hadex.itch.io/plasteroids
