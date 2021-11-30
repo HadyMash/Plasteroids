@@ -236,4 +236,4 @@ MonoBehaviour:
   rb: {fileID: 4558710129225720648}
   audioSource: {fileID: 4558710129225720646}
   bubbleSpeed: 5
-  bubbleSelfDestructDelay: 2.5
+  bubbleSelfDestructDelay: 1.5
