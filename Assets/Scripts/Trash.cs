@@ -10,6 +10,7 @@ public class Trash : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip trashDestroyed;
     [SerializeField] private AudioClip debrisDestroyed;
+    [SerializeField] private bool isMainMenuTrash = false;
 
     [System.Serializable]
     public struct TrashAsteroid {
@@ -25,11 +26,13 @@ public class Trash : MonoBehaviour
     private void Start()
     {
         // transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360)); *done by GameManager when spawning in the trash
-        scoreText = GameObject.Find("Score Text").GetComponent<TextMeshProUGUI>();
+        if (!isMainMenuTrash)
+        {
+            scoreText = GameObject.Find("Score Text").GetComponent<TextMeshProUGUI>();
+        }
         var scale = Random.Range(0.5f, 1.5f);
         var currentScale = transform.localScale.x;
         var newScale = currentScale += scale;
-        print(newScale);
         transform.localScale = new Vector3(newScale, newScale, newScale);
         if (!isDebris)
         {

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float turnSpeed = 200f;
     [SerializeField] private float moveSpeed = 7;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject bubblePrefab;
     [SerializeField] private GameObject bubbleSpawnPoint;
     [SerializeField] private float fireRate = 0.15f;
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
             GameObject bubble = (GameObject)Instantiate(bubblePrefab, bubbleSpawnPoint.transform.position, transform.rotation);
             nextFire = Time.time + fireRate;
             bubble.GetComponent<Rigidbody2D>().velocity += rb.velocity;
+            audioSource.PlayOneShot(audioSource.clip);
         }
     }
 

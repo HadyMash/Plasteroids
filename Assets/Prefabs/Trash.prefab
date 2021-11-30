@@ -124,6 +124,7 @@ MonoBehaviour:
   audioSource: {fileID: 5275511990489351336}
   trashDestroyed: {fileID: 8300000, guid: 14317ad8bd4fa427c936be4ade5ea28d, type: 3}
   debrisDestroyed: {fileID: 8300000, guid: 4698792121a8844ed88fcac8fe86c818, type: 3}
+  isMainMenuTrash: 0
   trashAsteroids:
   - sprite: {fileID: 794605180, guid: 34451cdeaa17f4c86b05394762d0ffe4, type: 3}
     debris:
