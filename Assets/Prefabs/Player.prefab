@@ -224,7 +224,7 @@ MonoBehaviour:
   rb: {fileID: 3035973317668974108}
   constantForce2D: {fileID: 3035973317668974083}
   spriteRenderer: {fileID: 3035973317668974105}
-  turnSpeed: 195
+  turnSpeed: 250
   moveSpeed: 7
   particleSystem: {fileID: 9057356863017210928}
   audioSource: {fileID: 1686109101122319033}
@@ -232,7 +232,7 @@ MonoBehaviour:
   bubbleSpawnPoint: {fileID: 3035973317671747144}
   fireRate: 0.2
   bubbleShield: {fileID: 8964550728918899630}
-  invinsibilityTime: 1.5
+  invinsibilityTime: 1.8
   bubbleShieldFlashes: 3
 --- !u!247 &3035973317668974083
 ConstantForce2D:
