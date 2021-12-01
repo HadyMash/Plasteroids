@@ -87,12 +87,13 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         lives = 3;
+        score = 0;
 
-        if (borderXCoord == null)
+        if (borderXCoord == 0)
         {
             borderXCoord = GameObject.Find("Top Border").transform.position.x - 0.5f;
         }
-        if (borderYCoord == null)
+        if (borderYCoord == 0)
         {
             borderYCoord = GameObject.Find("Rigth Border").transform.position.y - 0.5f;
         }

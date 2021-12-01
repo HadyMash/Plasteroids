@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float turnSpeed = 200f;
     [SerializeField] private float moveSpeed = 7;
+    [SerializeField] private ParticleSystem particleSystem;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject bubblePrefab;
     [SerializeField] private GameObject bubbleSpawnPoint;
@@ -20,6 +21,16 @@ public class PlayerController : MonoBehaviour
     private bool isInvinsible = false;
     public static event GameManager.CollisionEvent onCollisionEnter;
     private float nextFire = 0f;
+
+    private void Start()
+    {
+        if (particleSystem == null)
+        {
+            particleSystem = gameObject.GetComponent<ParticleSystem>();
+        }
+        var emission = particleSystem.emission;
+        emission.enabled = false;
+    }
 
     private void Update()
     {
@@ -42,6 +53,8 @@ public class PlayerController : MonoBehaviour
     {
         // if (!context.canceled)
         constantForce2D.relativeForce = new Vector2(context.ReadValue<float>() * moveSpeed, 0);
+        var emission = particleSystem.emission;
+        emission.enabled = context.ReadValue<float>() == 0 ? false : true;
     }
 
     public void OnShoot(InputAction.CallbackContext context)

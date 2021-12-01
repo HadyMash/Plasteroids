@@ -12,3 +12,7 @@ You are a turtle trying to get to land to lay its three eggs (3 lives). However,
 - <kbd>D</kbd> or <kbd>→</kbd> to turn right.
 - <kbd>W</kbd> or <kbd>↑</kbd> to move forward.
 - <kbd>⎵</kbd> to shoot.
+
+---
+# Attribution
+* **Large Trash Pixel Art:** by Clint Bellanger (https://opengameart.org/content/recycle-items-set)
